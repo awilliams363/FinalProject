@@ -1,8 +1,9 @@
 # FinalProject
 
 ## NOTES: 
-***PASSWORD FOR ALL ACCOUNTS ON FILE: 1a2b3c4d ***
+***PASSWORD FOR ALL ACCOUNTS ON FILE: 1a2b3c4d 
     Check db.sqlite3 file for usernames and other attributes 
+
 *Make sure to download Django first in the terminal you may also want to create a virtual environment 
 
 *To make and add functions: 
@@ -19,6 +20,7 @@
     -the models can then be used in the webpages or views. 
 
 *Ill likely be getting rid of the Contact Us section, but some of features in it may be useful for building the notification function 
+---
 
 *Other Notes: 
     -the sourcecode used issuebooks and viewbook for the borrow and borrow record functions. I've change the front end names to borrow and borrow record but Ill keep the names the same as the source code on the backend 
@@ -35,6 +37,8 @@
 *Ill also cleanup the webpage layout and change the colorscheme to look more professional 
 
 *This below is from the original readme file:
+---
+
 ## Users
 ### Librarian
 - Create Librarian account and Login.
