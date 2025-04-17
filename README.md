@@ -1,8 +1,6 @@
 # FinalProject
- Here's the source code: 
- SourceCode: https://github.com/sumitkumar1503/librarymanagement.git
 
-NOTES: 
+## NOTES: 
 
 *Make sure to download Django first in the terminal you may also want to create a virtual environment 
 
@@ -34,39 +32,79 @@ NOTES:
 
 *Ill update this readme file to include and describe all the correct functions, users, etc once I clean up everything
 *Ill also cleanup the webpage layout and change the colorscheme to look more professional 
-*Ill add in the faculty pages and functionsa as well, theyre mainly the same as the student functions 
-
-
 
 *This below is from the original readme file:
-## Functions
-### Admin
-- Create Admin account and Login.
-- Can Add, View, Book
-- Can Issue Book (added by Admin) to registered student.
-- Can view Issued book with issued date and expiry date.
-- Can view Fine (10 rupees for each day after expiry date).
-- Can View Students that are registered into system.
+## Users
+### Librarian
+- Create Librarian account and Login.
+- Can Add, Borrow, Return, and Reserve Books
+- Can Issue a Book to a registered Student.
+- Can View Borrow Record of All Students.
+- Can view Fine (10 dollars for each day after expiry date).
+- Can View all Students that are registered into system.
 
 ### Student
-- Create account and Login.
-- Can view their issued book only with expiry date and fine(if there any otherwise 0)
+- Create Student account and Login.
+- Can Borrow, Return, and Reserve Books
+- Can View their own Borrow Record.
+
+
+### Faculty
+- Create Faculty account and Login.
+- Can Borrow, Return, and Reserve Books
+- Can View their own Borrow Record.
 ---
+## Functions 
+
+## Add Books
+- Add books to the Library System 
+- Exclusive to Librarians 
+
+## Borrow Books 
+- Borrow Books from the Library System 
+- Books can only be Borrowed by Students 
+- Books can also be Issued to Students by Librarians
+
+## Return Books
+- Borrowed Books can be Returned to the Library
+- The Availability status of the Book will update to "Available" 
+- The Status of the Book in the Borrow Record will update to "Returned" 
+
+## Reserve Books
+- Currently Borrowed or Available Books can be Reserved 
+- The Availability status of the Book will update to "Reserved" 
+- The Status of the Book in the Borrow Record will update to "Reserved" 
+
+## View Books 
+- View all Books in the Library System including their Availability Status 
+
+## View Borrow Record
+- View as Record of Books that have been Borrowed and track their Status 
+
+## View All Students 
+- View all Students in the Library System
+- Exclusive to Librarians 
 
 ## HOW TO RUN THIS PROJECT
-- Install Python(3.7.6 (that was the version used in the sourcecode. I have the most recent version installed and had no issues)) (Dont Forget to Tick Add to Path while installing Python)
+- Install Python (3.13.2 or most recent version)
 - Open Terminal and Execute Following Commands :
 ```
-python -m pip install -r requirements. txt
-```
-- Download This Project Zip Folder and Extract it
-- Move to project folder in Terminal. Then run following Commands :
-```
+git clone https://github.com/awilliams363/FinalProject.git
+python3 pip install Django 
+If you are not already in the LibraryManagement Folder enter: 
+cd LibraryManagement 
+To check to see if youre in the correct folder enter: 
+ls 
+and you should see the the file manage.py 
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-- Now enter following URL in Your Browser Installed On Your Pc
+- Now enter following URL in Your Browser
 ```
 http://127.0.0.1:8000/
 ```
+
+## Source Code 
+ Here's the source code if needed: 
+ SourceCode: https://github.com/sumitkumar1503/librarymanagement.git
