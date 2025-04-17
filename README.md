@@ -20,9 +20,9 @@
     -the models can then be used in the webpages or views. 
 
 *Ill likely be getting rid of the Contact Us section, but some of features in it may be useful for building the notification function 
----
 
-*Other Notes: 
+*Other Notes:
+--- 
     -the sourcecode used issuebooks and viewbook for the borrow and borrow record functions. I've change the front end names to borrow and borrow record but Ill keep the names the same as the source code on the backend 
     -the to view the databse you'll need sqlite viewer 
     -many of the databse tables a columns came with the source code. Ill be updating the column names and dataypes to match the project 
@@ -37,9 +37,9 @@
 *Ill also cleanup the webpage layout and change the colorscheme to look more professional 
 
 *This below is from the original readme file:
----
 
 ## Users
+---
 ### Librarian
 - Create Librarian account and Login.
 - Can Add, Borrow, Return, and Reserve Books
