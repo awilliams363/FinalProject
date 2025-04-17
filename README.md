@@ -1,7 +1,8 @@
 # FinalProject
 
 ## NOTES: 
-
+***PASSWORD FOR ALL ACCOUNTS ON FILE: 1a2b3c4d ***
+Check db.sqlite3 file for usernames and other attributes 
 *Make sure to download Django first in the terminal you may also want to create a virtual environment 
 
 *To make and add functions: 
