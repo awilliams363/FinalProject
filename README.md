@@ -1,9 +1,9 @@
-## University Library Management System:
+# University Library Management System:
 The University Library Management System (ULMS) is designed to handle the process of managing books, borrowing, and user interactions in a university library. The system will cater to students, faculty, and librarians by providing an intuitive web-based interface for managing books, borrowing, inventory, and accounts. 
 
 
-# User Roles and Access:
----
+## User Roles and Access
+
 ### Librarian
 - Can Create Librarian accounts and Login
 - Can Add, Borrow, Return, Reserve, and Search Books
@@ -61,6 +61,8 @@ The University Library Management System (ULMS) is designed to handle the proces
 ## View All Students 
 - View all Students in the Library System
 - Exclusive to Librarians 
+
+--- 
 
 ## HOW TO RUN THIS PROJECT
 - Install Python (3.13.2 or most recent version)
