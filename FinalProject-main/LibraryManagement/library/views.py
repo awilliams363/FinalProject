@@ -152,6 +152,7 @@ def addbook_view(request):
             return render(request,'library/bookadded.html')
     return render(request,'library/addbook.html',{'form':form})
 
+
 #Will edit login requirements to ensure students and faculty can also view book
 def viewbook_view(request):
     books=models.Book.objects.all()

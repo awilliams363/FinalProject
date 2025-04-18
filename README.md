@@ -38,7 +38,7 @@ The University Library Management System (ULMS) is designed to handle the proces
 
 ### Return Books
 - Borrowed Books can be Returned to the Library 
-- Books registered to Student can be Returned by Librarian and Faculty Users or the Regitered Student
+- Books registered to Students can be Returned by Librarian and Faculty Users or the Registered Student
 - The Availability Status of the Book will update to "Available" 
 - The Status of the Book in the User's Borrow Record will update to "Returned" 
 
