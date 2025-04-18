@@ -7,21 +7,21 @@ The University Library Management System (ULMS) is designed to handle the proces
 
 ### Librarian
 - Can Create Librarian accounts and Login
-- Can Add, Borrow, Return, Reserve, and Search Books
+- Can Add, Borrow, Return, Reserve, View, and Search Books
 - Can Issue a Book to a registered Student
 - Can View Borrow Record of All Students
-- Can View all Students that are registered into system.
+- Can View all Students that are registered into system
 
 ### Student
 - Can Create Student accounts and Login
-- Can Borrow, Return, Reserve, and Search Books
+- Can Borrow, Return, Reserve, View, and Search Books
 - Can View their personal Borrow Record
 
 
 ### Faculty
 - Can Create Faculty accounts and Login
-- Can Borrow, Return, Reserve, and Search Books
-- Can View their personal Borrow Record
+- Can View and Search Books
+- Can Issue and Return Books to and from registered Students
 
 ---
 
@@ -34,25 +34,29 @@ The University Library Management System (ULMS) is designed to handle the proces
 ### Borrow Books 
 - Borrow Books from the Library 
 - Books can only be Borrowed by Students 
-- Books can be Issued to Students by Librarians
+- Books can be Issued to Students by Librarians or Faculty
 
 ### Return Books
 - Borrowed Books can be Returned to the Library 
+- Books registered to Student can be Returned by Librarian and Faculty Users or the Regitered Student
 - The Availability Status of the Book will update to "Available" 
 - The Status of the Book in the User's Borrow Record will update to "Returned" 
 
 ### Reserve Books
 - Currently Borrowed or Available Books can be Reserved 
+- Books can be Reserved to a Registered Student by the Student or all Librarians 
 - The Availability status of the Book will update to "Reserved" 
-- The Status of the Book in the Borrow Record will update to "Reserved" **check this
+- The Status of the Book in the Borrow Record will update to "Reserved" 
 
 ### Search Books
 - Search for library books by their title 
+- Any Registered User can Search a Book 
 - Notifies user of whether the Book exists in the Library 
 - Notifies user of whether the Book is currently available 
 
 ### View Books 
 - View all Books in the Library System including their Availability Status 
+- Any Registered User can View the Books
 
 ### View Borrow Record
 - View as Record of Books that have been Borrowed and track their Status 
@@ -85,3 +89,7 @@ python3 manage.py runserver
 ```
 http://127.0.0.1:8000/
 ```
+
+- You can create your own accounts for testing 
+- Or you can use sample accounts: student1, student2, librarian1, and faculty1 
+- Using password: 1a2b3c4d

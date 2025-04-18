@@ -105,27 +105,27 @@
     {% include "library/navbar.html" %}
     <br>
     <br>
-<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Login As Student!</h3></center>
+<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Login as a Student!</h3></center>
     <div class="signup-form">
         <form  method="post" class="form-horizontal">
 
-    			<center><h2>Student Login</h2></center>
+    			<center><h2>Login</h2></center>
 
 {% csrf_token %}
             {% for field in form %}
-            <div class="form-group">
+            <center><div class="form-group">
               <label class="control-label col-xs-4">{{ field.label_tag }}</label>
               <div class="col-xs-8">
               {{ field }}
                </div>
-            </div>
+            </div></center>
             {% endfor %}
 
-    		<div class="form-group">
+    		<center><div class="form-group">
     			<div class="col-xs-8 col-xs-offset-4">
             <button type="submit" class="btn btn-primary btn-lg">Login</button>
     			</div>
-    		</div>
+    		</div></center>
         </form>
     	<div class="text-center">Do not have account? <a href="studentsignup">Signup here</a></div>
     </div>

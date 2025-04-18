@@ -105,11 +105,11 @@
     {% include "library/navbar.html" %}
     <br>
     <br>
-<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Login As Faculty!</h3></center>
-    <div class="signup-form">
+<center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Login as Faculty</h3></center>
+    <center><div class="signup-form">
         <form  method="post" class="form-horizontal">
 
-    			<center><h2>Faculty Login</h2></center>
+    			<h2>Login</h2>
 
 {% csrf_token %}
             {% for field in form %}
@@ -128,7 +128,7 @@
     		</div>
         </form>
     	<div class="text-center">Do not have account? <a href="facultysignup">Signup here</a></div>
-    </div>
+    </div></center>
 
 
 

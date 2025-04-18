@@ -57,19 +57,19 @@ border-radius: 5px;
 }
     </style>
   </head>
-  <body>
+  <body style="background-color: rgb(246, 246, 246);">
     {% include "library/navbaradmin.html" %}
     <br>
     <br>
-    <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>Student registered in Library !</h3>
+    <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>All Registered Students</h3>
 
     {% if students%}
 <table class="redTable">
 <thead>
 <tr>
 <th>Name</th>
-<th>Enrollment</th>
-<th>Branch</th>
+<th>Major</th>
+<th>Classification</th>
 </tr>
 </thead>
 <tfoot>
@@ -83,8 +83,8 @@ border-radius: 5px;
   {% for s in students %}
     <tr>
       <td>{{s.get_name}}</td>
-      <td>{{s.enrollment}}</td>
-      <td>{{s.branch}}</td>
+      <td>{{s.major}}</td>
+      <td>{{s.classification}}</td>
 
     </tr>
 

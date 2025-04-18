@@ -54,16 +54,16 @@ border-radius: 5px;
 }
 </style>
   </head>
-  <body>
+  <body style="background-color: rgb(246, 246, 246);">
     {% include "library/navbaradmin.html" %}
     <br>
     <br>
-    <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>View All Available Books in Library !</h3>
+    <h3 class="p-3 mb-2 bg-primary text-light" style = 'font-size: 50px;text-align:center;'>University Library Catalog</h3>
 {% if books%}
 <table class="redTable">
 <thead>
 <tr>
-<th>Book Name</th>
+<th>Title</th>
 <th>ISBN</th>
 <th>Author</th>
 <th>Subject</th>
@@ -73,7 +73,7 @@ border-radius: 5px;
 </thead>
 <tfoot>
 <tr>
-<td colspan="4" rowspan="4">
+<td colspan="6" rowspan="4">
 <div class="links"></div>
 </td>
 </tr>
