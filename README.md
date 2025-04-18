@@ -1,6 +1,7 @@
 # University Library Management System:
 The University Library Management System (ULMS) is designed to handle the process of managing books, borrowing, and user interactions in a university library. The system will cater to students, faculty, and librarians by providing an intuitive web-based interface for managing books, borrowing, inventory, and accounts. 
 
+---
 
 ## User Roles and Access
 
@@ -24,47 +25,47 @@ The University Library Management System (ULMS) is designed to handle the proces
 
 ---
 
-## Functions: 
+## Functions
 
-## Add Books
-- Add books to the Library System 
+### Add Books
+- Add books to the Library 
 - Exclusive to Librarians 
 
-## Borrow Books 
-- Borrow Books from the Library System 
+### Borrow Books 
+- Borrow Books from the Library 
 - Books can only be Borrowed by Students 
-- Books can also be Issued to Students by Librarians
+- Books can be Issued to Students by Librarians
 
-## Return Books
-- Borrowed Books can be Returned to the Library
-- The Availability status of the Book will update to "Available" 
-- The Status of the Book in the Borrow Record will update to "Returned" 
+### Return Books
+- Borrowed Books can be Returned to the Library 
+- The Availability Status of the Book will update to "Available" 
+- The Status of the Book in the User's Borrow Record will update to "Returned" 
 
-## Reserve Books
+### Reserve Books
 - Currently Borrowed or Available Books can be Reserved 
 - The Availability status of the Book will update to "Reserved" 
-- The Status of the Book in the Borrow Record will update to "Reserved" 
+- The Status of the Book in the Borrow Record will update to "Reserved" **check this
 
-## Search Books
+### Search Books
 - Search for library books by their title 
-- Notifies user of whether book exists in the system 
-- Notifies user of whether books in the system are available 
+- Notifies user of whether the Book exists in the Library 
+- Notifies user of whether the Book is currently available 
 
-## View Books 
+### View Books 
 - View all Books in the Library System including their Availability Status 
 
-## View Borrow Record
+### View Borrow Record
 - View as Record of Books that have been Borrowed and track their Status 
 - Students can view their personal borrow record 
 - Librarians can view the borrow records of all students 
 
-## View All Students 
+### View All Students 
 - View all Students in the Library System
 - Exclusive to Librarians 
 
 --- 
 
-## HOW TO RUN THIS PROJECT
+## How to run the project
 - Install Python (3.13.2 or most recent version)
 - Open Terminal and Execute Following Commands :
 ```
