@@ -99,5 +99,5 @@ http://127.0.0.1:8000/
 ```
 
 - You can create your own accounts for testing 
-- Or you can use sample accounts: student1, student2, librarian1, and faculty1 
+- You can use sample accounts: student1, student2, librarian1, and faculty1 
 - Using password: 1a2b3c4d
