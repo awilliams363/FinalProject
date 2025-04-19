@@ -1,5 +1,5 @@
 # University Library Management System:
-The University Library Management System (ULMS) is designed to handle the process of managing books, borrowing, and user interactions in a university library. The system will cater to students, faculty, and librarians by providing an intuitive web-based interface for managing books, borrowing, inventory, and accounts. 
+The University Library Management System (ULMS) is designed to handle the process of managing books, borrowing, and user interactions in a university library. The system will cater to students, faculty, and librarians by providing an intuitive web-based interface for these functions. 
 
 ---
 
