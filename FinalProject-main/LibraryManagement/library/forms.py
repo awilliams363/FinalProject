@@ -1,10 +1,9 @@
+#Defines the user entry fields for all forms within the app
+#All forms reference a model from the models.py folder
 from django import forms
 from django.contrib.auth.models import User
 from . import models
 
-
-#This page creates all the forms to be filled out for signup pages, adding books, borrowing books, etc 
-#forms.Model adds a reference to the elements defined in the model.py
 class ContactusForm(forms.Form):
     Name = forms.CharField(max_length=30)
     Email = forms.EmailField()
@@ -42,8 +41,9 @@ class BookForm(forms.ModelForm):
         model=models.Book
         fields=['name','isbn','author','subject','publisher','publishDate']
 
+#to_field_name value will be stored when form is submitted
+# __str__ method of book model will be shown there in html pages as the name of the entry field for the form 
 class IssuedBookForm(forms.Form):
-    #to_field_name value will be stored when form is submitted.....__str__ method of book model will be shown there in html
     isbn2=forms.ModelChoiceField(queryset=models.Book.objects.all(),empty_label="Book name and ISBN", to_field_name="isbn",label='Name and Isbn')
     enrollment2=forms.ModelChoiceField(queryset=models.StudentExtra.objects.all(),empty_label="Name and Major or Department",to_field_name='major',label='Name and enrollment')
     
