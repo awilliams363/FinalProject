@@ -72,7 +72,7 @@ The University Library Management System (ULMS) is designed to handle the proces
 ## Advanced Function 
 
 ### Automated Book Return Reminders 
-- Issues a reminder when the Due Date for a Borrowed Book is in the next 7 days and 2 days 
+- Issues a Reminder when the Due Date for a Borrowed Book is in the next 7 days and 2 days 
 - Reminder Notifications can be issued to and viewed by Students and Faculty 
 
 ---
