@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-import os
+import certifi, os
 from pathlib import Path
 
 # Build paths inside the project 
@@ -128,14 +128,6 @@ STATIC_DIR,
 #Login redirects 
 LOGIN_REDIRECT_URL='/afterlogin'
 LOGOUT_REDIRECT_URL='/index'
-
-#for email (Contact us Page)
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'sumitproject1503@gmail.com'
-EMAIL_HOST_PASSWORD = 'sumityoyo'
 
 
 # Default primary key field type

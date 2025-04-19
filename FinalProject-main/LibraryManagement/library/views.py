@@ -8,8 +8,6 @@ from django.contrib.auth.models import Group
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required,user_passes_test
 from datetime import datetime,timedelta,date
-from django.core.mail import send_mail
-from LibraryManagement.settings import EMAIL_HOST_USER
 from django.urls import reverse
 from django.utils import timezone
 from .models import IssuedBook
@@ -288,21 +286,6 @@ def viewissuedbookbystudent(request):
 #About Us Page 
 def aboutus_view(request):
     return render(request,'library/aboutus.html')
-
-
-#Contact Us Page 
-#Sends out an email to us of the contact form user entry 
-def contactus_view(request):
-    sub = forms.ContactusForm()
-    if request.method == 'POST':
-        sub = forms.ContactusForm(request.POST)
-        if sub.is_valid():
-            email = sub.cleaned_data['Email']
-            name=sub.cleaned_data['Name']
-            message = sub.cleaned_data['Message']
-            send_mail(str(name)+' || '+str(email),message, EMAIL_HOST_USER, ['wapka1503@gmail.com'], fail_silently = False)
-            return render(request, 'library/contactussuccess.html')
-    return render(request, 'library/contactus.html', {'form':sub})
 
 
 #Search Books
