@@ -25,7 +25,7 @@ The University Library Management System (ULMS) is designed to handle the proces
 
 ---
 
-## Functions
+## Basic Functions
 
 ### Add Books
 - Add books to the Library 
@@ -68,6 +68,14 @@ The University Library Management System (ULMS) is designed to handle the proces
 - Exclusive to Librarians 
 
 --- 
+
+## Advanced Function 
+
+### Automated Book Return Reminders 
+- Issues a reminder when a borrowed book is due within 2 and 7 days 
+- Reminder Notifications can be issued to and viewed by Students and Faculty 
+
+---
 
 ## How to run the project
 - Install Python (3.13.2 or most recent version)

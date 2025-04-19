@@ -55,4 +55,5 @@ urlpatterns = [
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
     path('searchbook', views.searchbook_view),
+    path('reminder', views.reminder_view, name='reminder'),
 ]

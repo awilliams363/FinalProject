@@ -9,6 +9,8 @@ from datetime import datetime,timedelta,date
 from django.core.mail import send_mail
 from LibraryManagement.settings import EMAIL_HOST_USER
 from django.urls import reverse
+from django.utils import timezone
+from .models import IssuedBook
 
 #This file defines views and their functions and connects them to the desired .html webpage 
 #Admin =Librarian. It'll say librarian instead of admin in the webpages 
@@ -156,6 +158,10 @@ def addbook_view(request):
 #Will edit login requirements to ensure students and faculty can also view book
 def viewbook_view(request):
     books=models.Book.objects.all()
+    #Manual update to borrowed book6 (student2) to display reminders function and late fee 
+    testobj=models.IssuedBook.objects.filter(id='5')
+    testobj.update(issuedate='2025-04-01')
+    testobj.update(expirydate=timezone.now().date() + timedelta(days=7))
     return render(request,'library/viewbook.html',{'books':books})
 
 def bookreturn_view(request):
@@ -235,7 +241,7 @@ def viewissuedbook_view(request):
         fine=0
         if d>15:
             day=d-15
-            fine=day*10
+            fine=day*10.00
 
 
         books=list(models.Book.objects.filter(isbn=ib.isbn))
@@ -317,3 +323,40 @@ def searchbook_view(request):
         else:
             message = "⚠️ Book is currently not available."
     return render(request, 'library/searchbook.html', {'message': message})
+
+@login_required
+def reminder_view(request):
+    today = timezone.now().date()
+    upcoming_dates = [today + timedelta(days=7), today + timedelta(days=2)]
+
+    reminders = []
+
+    try:
+        if request.user.groups.filter(name='STUDENT').exists():
+            student = models.StudentExtra.objects.get(user=request.user)
+            reminders = IssuedBook.objects.filter(
+                major=student.major,
+                expirydate__in=upcoming_dates,
+                status='Borrowed'
+            )
+        elif request.user.groups.filter(name='FACULTY').exists():
+            faculty = models.FacultyExtra.objects.get(user=request.user)
+            reminders = IssuedBook.objects.filter(
+                major=faculty.department,
+                expirydate__in=upcoming_dates,
+                status='Borrowed'
+            )
+    except (models.StudentExtra.DoesNotExist, models.FacultyExtra.DoesNotExist):
+        reminders = []
+
+    reminder_data = []
+    for r in reminders:
+        days_left = (r.expirydate - today).days
+        reminder_data.append({
+            'isbn': r.isbn,
+            'due_date': r.expirydate,
+            'days_left': days_left
+        })
+
+    context = {'reminders': reminder_data}
+    return render(request, 'library/reminder.html', context)
