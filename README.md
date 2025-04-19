@@ -60,8 +60,8 @@ The University Library Management System (ULMS) is designed to handle the proces
 
 ### View Borrow Record
 - View as Record of Books that have been Borrowed and track their Status 
-- Students can view their personal borrow record 
-- Librarians can view the borrow records of all students 
+- Students can view their Personal Borrow Record 
+- Librarians can view the Borrow Records of all Students 
 
 ### View All Students 
 - View all Students in the Library System
@@ -72,7 +72,7 @@ The University Library Management System (ULMS) is designed to handle the proces
 ## Advanced Function 
 
 ### Automated Book Return Reminders 
-- Issues a reminder when a borrowed book is due within 2 and 7 days 
+- Issues a reminder when the Due Date for a Borrowed Book is in the next 7 days and 2 days 
 - Reminder Notifications can be issued to and viewed by Students and Faculty 
 
 ---
